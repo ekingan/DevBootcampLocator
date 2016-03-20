@@ -1,2 +1,2 @@
-# crossfitCrazy
-# crossfitCrazy
+# rails-auth-template
+# mcm
