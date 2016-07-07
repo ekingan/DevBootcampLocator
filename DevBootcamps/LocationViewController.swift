@@ -17,12 +17,24 @@ class LocationViewController: UIViewController, UITableViewDelegate, UITableView
     let locationManager = CLLocationManager();
     
     let regionRadius: CLLocationDistance! = 1000
+    
+    let addresses = [
+        "200 Bush St San Francisco CA 94104",
+        "220 Bush St San Francisco CA 94104",
+        "100 Montgomery St San Francisco CA 94104"
+        
+    ]
 
     override func viewDidLoad() {
         super.viewDidLoad()
         map.delegate = self
         tableView.delegate = self
         tableView.dataSource = self
+        
+        for add in addresses {
+            getPlacemarkFromAddress(add)
+            
+        }
     }
     
     override func viewDidAppear(animated: Bool) {
@@ -65,6 +77,24 @@ class LocationViewController: UIViewController, UITableViewDelegate, UITableView
     func mapView(mapView: MKMapView, didUpdateUserLocation userLocation: MKUserLocation) {
         if let loc = userLocation.location {
             centerMapOnLocation(loc)
+        }
+    }
+    func createAnnotationForLocation(location: CLLocation) {
+        let bootcamp = BootcampAnnotaion(coordinate: location.coordinate)
+        map.addAnnotation(bootcamp)
+        
+    }
+    
+    
+    func getPlacemarkFromAddress(address: String) {
+        CLGeocoder().geocodeAddressString(address) {
+            (placemarks: [CLPlacemark]?, error: NSError?) -> Void in
+            if let marks = placemarks where marks.count > 0 {
+                if let loc = marks[0].location   {
+                    //at this point we have a vaild location with coordinates
+                    self.createAnnotationForLocation(loc)
+                }
+            }
         }
     }
 }

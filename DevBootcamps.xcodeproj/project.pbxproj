@@ -13,6 +13,7 @@
 		C3FDEA0B1D2D5C3A00258AD5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C3FDEA091D2D5C3A00258AD5 /* Main.storyboard */; };
 		C3FDEA0D1D2D5C3A00258AD5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C3FDEA0C1D2D5C3A00258AD5 /* Assets.xcassets */; };
 		C3FDEA101D2D5C3A00258AD5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C3FDEA0E1D2D5C3A00258AD5 /* LaunchScreen.storyboard */; };
+		C3FDEA181D2E105400258AD5 /* BootcampAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3FDEA171D2E105400258AD5 /* BootcampAnnotation.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		C3FDEA0C1D2D5C3A00258AD5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C3FDEA0F1D2D5C3A00258AD5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C3FDEA111D2D5C3A00258AD5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C3FDEA171D2E105400258AD5 /* BootcampAnnotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BootcampAnnotation.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				C3FDEA0C1D2D5C3A00258AD5 /* Assets.xcassets */,
 				C3FDEA0E1D2D5C3A00258AD5 /* LaunchScreen.storyboard */,
 				C3FDEA111D2D5C3A00258AD5 /* Info.plist */,
+				C3FDEA171D2E105400258AD5 /* BootcampAnnotation.swift */,
 			);
 			path = DevBootcamps;
 			sourceTree = "<group>";
@@ -140,6 +143,7 @@
 				C3FDEA081D2D5C3A00258AD5 /* LocationViewController.swift in Sources */,
 				C3FDEA041D2D5C3A00258AD5 /* AppDelegate.swift in Sources */,
 				C3FDEA061D2D5C3A00258AD5 /* FirstViewController.swift in Sources */,
+				C3FDEA181D2E105400258AD5 /* BootcampAnnotation.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
