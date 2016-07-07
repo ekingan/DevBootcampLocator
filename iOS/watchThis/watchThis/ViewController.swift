@@ -52,6 +52,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
           if let cell = tableView.dequeueReusableCellWithIdentifier("MovieCell") as? MovieCell {
             let movie = movies[indexPath.row]
+            cell.configureCell(movie)
             return cell
         } else {
             return MovieCell()
@@ -67,22 +68,22 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         
     }
     
-    @IBAction func segueToDetails(sender: AnyObject) {
-        
-        
-        if let superview = sender.superview {
-            if let cell = superview!.superview as? MovieCell {
-                
-                guard let indexPath = self.tableView.indexPathForCell(cell) else { return }
-                
-                let movie = movies[indexPath.row]
-                //print(movie)
-                
-                self.performSegueWithIdentifier("DetailMovieSegue", sender: movie)
-            }
-        }
-        
-    }
+//    @IBAction func segueToDetails(sender: AnyObject) {
+//        
+//        
+//        if let superview = sender.superview {
+//            if let cell = superview!.superview as? MovieCell {
+//                
+//                guard let indexPath = self.tableView.indexPathForCell(cell) else { return }
+//                
+//                let movie = movies[indexPath.row]
+//                //print(movie)
+//                
+//                self.performSegueWithIdentifier("DetailMovieSegue", sender: movie)
+//            }
+//        }
+//        
+//    }
 
 
 
