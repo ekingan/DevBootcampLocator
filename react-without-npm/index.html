@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	</head>
+	<body>
+		<div id="putButtonHere"></div>
+
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.1.0/react.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.1.0/react-dom.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.34/browser.min.js"></script>
+
+		<script type="text/babel">
+
+		var btnStyle = {
+			background: 'pink'
+		}
+			
+			var PinkButton = React.createClass({
+				onClick: function(e) {
+						alert("Don't ever write production code like this!");
+					},
+					
+				render: function() {
+
+					return (
+						<button onClick={this.onClick} style={btnStyle}> Click Me </button>
+					);
+				}
+			});
+
+		ReactDOM.render(<PinkButton />, document.getElementById("putButtonHere"));
+		</script>
+	</body>
+</html>
