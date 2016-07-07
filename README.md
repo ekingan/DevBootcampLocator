@@ -1,2 +1,0 @@
-# rails-auth-template
-# mcm
