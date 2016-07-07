@@ -79,6 +79,23 @@ class LocationViewController: UIViewController, UITableViewDelegate, UITableView
             centerMapOnLocation(loc)
         }
     }
+    
+    func mapView(mapView: MKMapView, viewForAnnotation annotation: MKAnnotation) -> MKAnnotationView? {
+        if annotation.isKindOfClass(BootcampAnnotaion) {
+            
+          let annoView = MKPinAnnotationView(annotation: annotation, reuseIdentifier: "Default")
+            annoView.pinTintColor = UIColor.blueColor()
+            annoView.animatesDrop = true
+            return annoView
+            
+        } else if annotation.isKindOfClass(MKUserLocation) {
+            return nil
+        }
+        
+        return nil
+    }
+    
+    
     func createAnnotationForLocation(location: CLLocation) {
         let bootcamp = BootcampAnnotaion(coordinate: location.coordinate)
         map.addAnnotation(bootcamp)
